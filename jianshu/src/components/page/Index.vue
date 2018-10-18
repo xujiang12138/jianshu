@@ -32,7 +32,7 @@
       </a>
 
       <div  class="title" style="margin-top: 30px">
-        <span style="margin-left: -200px">推荐作者</span>
+        <span style="margin-left: -200px">推荐作者</span><font-awesome-icon icon="coffee" style="font-size: 20px" />
         <span style="float: right">换一批</span>
       </div>
       <div>
