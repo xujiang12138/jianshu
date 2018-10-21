@@ -38,8 +38,10 @@
       <div>
         <v-list></v-list>
       </div>
-      <a href="/recommendations/users?utm_source=desktop&amp;utm_medium=index-users" target="_blank" class="find-more">
-        查看全部<i class="iconfont ic-link"></i></a>
+      <router-link to="/recommend">
+        <a href="/recommendations/users?utm_source=desktop&amp;utm_medium=index-users" target="_blank" class="find-more">
+          查看全部<i class="iconfont ic-link"></i></a>
+      </router-link>
 
     </div>
 

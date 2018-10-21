@@ -6,10 +6,10 @@
           <ul id="test">
             <router-link to="basic"><li ><a class="active"> <img src="static/img/message.png" class="icon">基础设置</a></li></router-link>
             <router-link to="profile"><li><a><img src="static/img/letter.png" class="icon">个人资料</a></li></router-link>
-            <router-link to="requests"><li><a><img src="static/img/download.png" class="icon">微博认证</a></li></router-link>
-            <router-link to="likes"><li><a><img src="static/img/love.png" class="icon">          黑名单</a></li></router-link>
-            <router-link to="follows"><li><a><img src="static/img/follow.png" class="icon">赞赏设置</a></li></router-link>
-            <router-link to="money"><li><a><img src="static/img/money.png" class="icon">账号管理</a></li></router-link>
+            <li><a><img src="static/img/download.png" class="icon">微博认证</a></li>
+            <li><a><img src="static/img/love.png" class="icon">          黑名单</a></li>
+            <li><a><img src="static/img/follow.png" class="icon">赞赏设置</a></li>
+            <li><a><img src="static/img/money.png" class="icon">账号管理</a></li>
           </ul>
         </div>
       </div>

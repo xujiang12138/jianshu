@@ -99,6 +99,12 @@ export default new Router({
           ]
         },
         {
+          //所有用户
+          path: '/recommend',
+          component: resolve => require(['../components/page/Recommend.vue'], resolve),
+          meta: {title: '用户列表'}
+        },
+        {
           //所有用户组件
           path: '/users',
           component: resolve => require(['../components/page/Users.vue'], resolve),
