@@ -7,9 +7,9 @@
             <img  class="avatar" src="//upload.jianshu.io/collections/images/4/sy_20091020135145113016.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240">
           </b-col>
           <b-col  cols="4">
-            <p class="name">{{topic.topicName}}</p>
+            <p class="name">{{topic.topicname}}</p>
             <div style="display: flex">
-              <p class="info">收录了{{topic.articleCount}}篇文章 · {{topic.fans}}人关注</p>
+              <p class="info">收录了{{topic.articlecount}}篇文章 · {{topic.fans}}人关注</p>
             </div>
           </b-col>
           <b-col  cols="6">
@@ -28,7 +28,7 @@
                   <p style="font-size: 18px;font-weight: bold;color: #333;padding-top: 6%;margin-left: -400px">{{article.title}}</p>
                   <p style="color: grey;font-size: 12px;color: gray;letter-spacing: 1px;margin-left: -200px">{{article.summary}}</p>
                   <div class="line">
-                    <p class="amount-text" style="margin-left: -40px">{{article.nickname}}</p>
+                    <p class="amount-text" style="margin-left: -40px">{{article.nickName}}</p>
                     <img  src="http://p88kzenjw.bkt.clouddn.com/message.png" class="icon2">
                     <p class="amount-text">{{article.comments}}</p>
                     <img  src="http://p88kzenjw.bkt.clouddn.com/like.png" class="icon3">
@@ -89,103 +89,22 @@
 
       activated(){
           this.id = this.$route.params.id;
-        if (this.id == 1) {
-          var t = {
-            "id": 1,
-            "topicName": "读书",
-            "topicUrl": "https://upload.jianshu.io/collections/images/83/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64",
-            "summary": "读书读书读书读书读书读书读书读书",
-            "articleCount": 49535,
-            "fans": 1601,
-            "description":"欢迎关注公众号简宝玉( 公众号ID : jianshu4321 )后台回复“指南”获取玩转简书绝密珍贵资料汇总；有问题，找宝玉。简宝玉同志会专程为你答疑解惑关于简书的一切。\n" +
-            "\n" +
-            "Hi，很高兴在@IT·互联网专题遇见你。 \n" +
-            "收录范围：收录IT&互联网行业观察与思考，数码产品极客体验分析等类型文章 \n" +
-            "投稿须知：https://www.jianshu.com/p/4edc76104c27 \n" +
-            "专题主编：@若锦 https://www.jianshu.com/u/e4c63b354a77\n" +
-            "\n" +
-            "官...",
-            "creator":"简书",
-            "picture":"//upload.jianshu.io/users/upload_avatars/972702/d4166d0388c2.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp",
-            "articleList":[
-              {
-                "id":1,
-                "title":"测试文章",
-                "summary":"测试文章测试文章测试文章测试文章测试文章...",
-                "thumbnail":"//upload-images.jianshu.io/upload_images/4165149-a1fbda1b94d0e463.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240",
-                "authorId":2,
-                "nickname":"作者",
-                "comments":1234,
-                "likes":12
-              },
-              {
-                "id":2,
-                "title":"测试文章",
-                "summary":"测试文章测试文章测试文章测试文章测试文章...",
-                "thumbnail":"//upload-images.jianshu.io/upload_images/4165149-a1fbda1b94d0e463.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240",
-                "authorId":2,
-                "nickname":"作者",
-                "comments":1234,
-                "likes":12
-              },
-              {
-                "id":3,
-                "title":"测试文章",
-                "summary":"测试文章测试文章测试文章测试文章测试文章...",
-                "thumbnail":"//upload-images.jianshu.io/upload_images/4165149-a1fbda1b94d0e463.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240",
-                "authorId":2,
-                "nickname":"作者",
-                "comments":1234,
-                "likes":12
-              },{
-                "id":4,
-                "title":"测试文章",
-                "summary":"测试文章测试文章测试文章测试文章测试文章...",
-                "thumbnail":"//upload-images.jianshu.io/upload_images/4165149-a1fbda1b94d0e463.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240",
-                "authorId":2,
-                "nickname":"作者",
-                "comments":1234,
-                "likes":12
-              }
-              ,{
-                "id":5,
-                "title":"测试文章",
-                "summary":"测试文章测试文章测试文章测试文章测试文章...",
-                "thumbnail":"//upload-images.jianshu.io/upload_images/4165149-a1fbda1b94d0e463.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240",
-                "authorId":2,
-                "nickname":"作者",
-                "comments":1234,
-                "likes":12
-              }
-            ],
-            "fansList":[
-              {
-                "authorId":1,
-                "avatar":"//upload.jianshu.io/users/upload_avatars/14506136/505bd1e4-8c70-4f0d-9f3e-2a29f2071844?imageMogr2/auto-orient/strip|imageView2/1/w/32/h/32/format/webp"
-              },
-              {
-                "authorId":2,
-                "avatar":"//cdn2.jianshu.io/assets/default_avatar/10-e691107df16746d4a9f3fe9496fd1848.jpg"
-              },
-              {
-                "authorId":3,
-                "avatar":"//upload.jianshu.io/users/upload_avatars/4393589/2d19ebd3-4c34-4f7a-8540-4693329206ec?imageMogr2/auto-orient/strip|imageView2/1/w/32/h/32/format/webp"
-              }, {
-                "authorId":4,
-                "avatar":"//upload.jianshu.io/users/upload_avatars/14506119/fe41eaf6-83f3-42ab-8bad-2d59a3b19d66?imageMogr2/auto-orient/strip|imageView2/1/w/32/h/32/format/webp"
-              }
-              , {
-                "authorId":5,
-                "avatar":"//upload.jianshu.io/users/upload_avatars/14506071/962383af-6f71-4efd-aa26-efd6ce3c7e7c?imageMogr2/auto-orient/strip|imageView2/1/w/32/h/32/format/webp"
-              }
-            ]
-          };
-          this.topic = t;
-          this.articleList = t.articleList;
-          this.fansList = t.fansList
-        } else {
-          this.topic = {};
-        }
+        this.$http
+          .get('http://localhost:8088/user/button/'+this.id)
+          .then((res)=>{
+            this.topic = res.data.data
+          });
+        this.$http
+          .get('http://localhost:8088/user/button/'+this.id)
+          .then((res)=>{
+            this.articleList = res.data.data.articles
+            this.fansList = res.data.data.fansList
+          });
+        // this.$http
+        //   .get('http://localhost:8088/user/button/'+this.id)
+        //   .then((res)=>{
+        //     this.articleList = res.data.data.fansList
+        //   });
       }
     }
 </script>

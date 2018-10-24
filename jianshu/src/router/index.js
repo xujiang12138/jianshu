@@ -4,7 +4,9 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 export default new Router({
+  //去除路径中的#标志
   mode: "history",
+  //一级路由
   routes: [
     {
       //首页组件

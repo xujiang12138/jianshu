@@ -3,11 +3,11 @@
       <div class="row" v-for="list in lists" :key="list.id">
         <div class="col-md-8">
           <div style="float: left;margin-top: 20px;margin-left: 20px  ">
-            <a href="#" class="avatar"><img class="qrcode2" :src="list.url"></a>
+            <a href="#" class="avatar"><img class="qrcode2" :src="list.avatar"></a>
           </div>
           <div  class="info" style="margin-top: 25px">
-            <a href="#" class="title">{{list.name}}<i class="iconfont ic-link"></i></a>
-            <div class="description">{{list.content}}</div>
+            <a href="#" class="title">{{list.nickname}}<i class="iconfont ic-link"></i></a>
+            <div class="description">写了{{list.wordsCount}}个字，{{list.likeCount}}喜欢</div>
           </div>
         </div>
         <div class="col-md-4" style="margin-top: 30px;font-size: 15px;color: green">
@@ -23,35 +23,21 @@
         name: "List",
       data(){
           return{
-            lists:[
-              {
-                "id":1,
-                "url":"//cdn2.jianshu.io/assets/web/download-index-side-qrcode-cb13fc9106a478795f8d10f9f632fccf.png",
-                "name":"简书大学堂",
-                "content":"写了15k字"
-              },
-              {
-                "id":2,
-                "url":"//cdn2.jianshu.io/assets/web/download-index-side-qrcode-cb13fc9106a478795f8d10f9f632fccf.png",
-                "name":"简书大学堂",
-                "content":"写了15k字"
-              },
-              {
-                "id":3,
-                "url":"//cdn2.jianshu.io/assets/web/download-index-side-qrcode-cb13fc9106a478795f8d10f9f632fccf.png",
-                "name":"简书大学堂",
-                "content":"写了15k字"
-              },
-              {
-                "id":4,
-                "url":"//cdn2.jianshu.io/assets/web/download-index-side-qrcode-cb13fc9106a478795f8d10f9f632fccf.png",
-                "name":"简书大学堂",
-                "content":"写了15k字"
-              },
-            ]
+            lists: []
           }
+      },
+      created() {
+        var that = this
+        this.$http
+          .get('http://localhost:8088/user/hot')
+          .then(function (response) {
+            // alert(JSON.stringify(response.data.data));
+            that.lists = response.data.data;
+          })
       }
     }
+
+
 </script>
 
 <style scoped>

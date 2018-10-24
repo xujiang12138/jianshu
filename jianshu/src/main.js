@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import jquery from 'jquery'
 import  bootstrap from 'bootstrap-vue'
+import  axios from 'axios'
 
 import '@/assets/css/iconfont.css'
 
@@ -18,6 +19,7 @@ Vue.use(jquery)
 Vue.use(bootstrap)
 Vue.component('font-awesome-icon',FontAwesomeIcon)
 Vue.config.productionTip = false
+Vue.prototype.$http = axios
 
 /* eslint-disable no-new */
 new Vue({

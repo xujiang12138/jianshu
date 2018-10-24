@@ -15,11 +15,11 @@
       </div>
       <div class="account-password">
         <div class="input-account">
-          <input type="text" placeholder="手机号或邮箱"/>
+          <input type="text" placeholder="手机号或邮箱" v-model="email" />
           <i class="iconfont">&#xe715;</i>
         </div>
         <div class="input-password">
-          <input type="password" placeholder="密码"/>
+          <input type="password" placeholder="密码" v-model="password"/>
           <i class="iconfont">&#xe709;</i>
         </div>
       </div>
@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="sign-in">
-        <input type="button" class="btn btn-block" value="登录">
+        <input type="button" class="btn btn-block" value="登录" @click="onClick">
       </div>
       <div class="others">
         <div>
@@ -56,7 +56,26 @@
   import 'bootstrap/dist/js/bootstrap.min'
 
   export default {
-    name: "Login"
+    name: "Login",
+    data(){
+      return{
+        email:[],
+        password:[]
+      }
+    },
+
+    methods:{
+      onClick() {
+        var that = this;
+        this.$http
+          .post('http://localhost:8088/user/sign_in', {"email": this.email, "password": this.password})
+          .then(function (response) {
+            alert(JSON.stringify(response.data.data));
+            localStorage.setItem("loginUser", JSON.stringify(response.data.data))
+            that.$router.push("/")
+          })
+      }
+    }
   }
 </script>
 
